@@ -6,15 +6,47 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://simrit518.github.io">
-  <title>Simrit Blog</title>
+  <title>CLARE：一种标签分类和标签推荐的联合方法 | Simrit Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Simrit Blog">
-<meta property="og:url" content="http://simrit518.github.io/index.html">
+  <meta name="description" content="Introduction数据分类和标签推荐在处理社交媒体平台上数据的应用。分类是给社交媒体数据分配类别标签，而标签推荐的目的是让标签自动标记这些数据。这两个任务经常被认为是独立的，并且分开处理。然而，数据分类中的标签和标签推荐中的标签本质上是相关的。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CLARE：一种标签分类和标签推荐的联合方法">
+<meta property="og:url" content="http://simrit518.github.io/2020/01/18/CLARE%EF%BC%9A%E4%B8%80%E7%A7%8D%E6%A0%87%E7%AD%BE%E5%88%86%E7%B1%BB%E5%92%8C%E6%A0%87%E7%AD%BE%E6%8E%A8%E8%8D%90%E7%9A%84%E8%81%94%E5%90%88%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="Simrit Blog">
+<meta property="og:description" content="Introduction数据分类和标签推荐在处理社交媒体平台上数据的应用。分类是给社交媒体数据分配类别标签，而标签推荐的目的是让标签自动标记这些数据。这两个任务经常被认为是独立的，并且分开处理。然而，数据分类中的标签和标签推荐中的标签本质上是相关的。">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://img1.ph.126.net/xGEfULhbENU5ABx9lqFyPw==/6632509225445973667.png">
+<meta property="og:image" content="http://img1.ph.126.net/4i0sSxrnIO5USJ4biN43LQ==/6632382781608759847.png">
+<meta property="og:image" content="http://img1.ph.126.net/66V-sc2EoL-n1_JJFGXEiA==/2598014035058228137.png">
+<meta property="og:image" content="http://img2.ph.126.net/xPImkTLGnQmPlFG9fD2msg==/1275926069448274412.png">
+<meta property="og:image" content="http://img1.ph.126.net/ajmPxC-gCtqlVdM1raO6pQ==/6632267332887894457.png">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Simple-bipartite-graph.svg/200px-Simple-bipartite-graph.svg.png">
+<meta property="og:image" content="http://img1.ph.126.net/zPg2uueV7CcsPcgvbwtJSQ==/6632500429352958799.png">
+<meta property="og:image" content="http://img1.ph.126.net/ukHBUN1wkPHUUL7jSmREOw==/6632718132652678552.png">
+<meta property="og:image" content="http://img1.ph.126.net/DPikRVnABXFtZ8_KHUzWiA==/2608710084173233702.png">
+<meta property="og:image" content="http://img0.ph.126.net/tDr3M_8n_pFPDb0Ejd-iJQ==/6632239845095432190.png">
+<meta property="og:image" content="http://img0.ph.126.net/k679ASiKj5DYvqjfLhlbFw==/1282399993912621518.png">
+<meta property="og:image" content="http://img2.ph.126.net/6sHh9pU6wNtF738OYtfNMQ==/90634942519714925.png">
+<meta property="og:image" content="http://img0.ph.126.net/qqyTB7HjnnQw2c__iU5lmw==/90634942519714929.png">
+<meta property="og:image" content="http://img0.ph.126.net/GtGytMjEp7FjMJAZq4b5Ug==/91197892473123363.png">
+<meta property="og:image" content="http://img0.ph.126.net/ENE2My3heT1x3Wsk9faJbw==/6632255238259985712.png">
+<meta property="og:image" content="http://img2.ph.126.net/r5M4_ApqpxEQWL5fE8SMWQ==/6632231049004173323.png">
+<meta property="og:image" content="http://img1.ph.126.net/0dgSdaimaHH4GKN0AEDmZw==/6632709336559656415.png">
+<meta property="og:image" content="http://img1.ph.126.net/AgBEu9OpaUoecyZWVRAa6g==/1282399993912621519.png">
+<meta property="og:image" content="http://img1.ph.126.net/kRM3Tua_67NSSo9k4fOUew==/6632587290771579814.png">
+<meta property="og:image" content="http://img1.ph.126.net/r8wpCYmv6ZLYZdEQL5z_CQ==/6632660958048032350.png">
+<meta property="og:image" content="http://img2.ph.126.net/yQU43vG2f9COOxkZHUI9tw==/6632718132652678553.png">
+<meta property="og:image" content="http://img2.ph.126.net/Au0Hre4vk-2YyWOvz40jhQ==/3079617720210173552.jpg">
+<meta property="og:image" content="http://img2.ph.126.net/ciWgxq33vCIPrJfd5rqoSA==/1036390864267524119.png">
+<meta property="og:image" content="http://img1.ph.126.net/Qld7itTvk9AMTayJuW6CoQ==/6632438856701826916.png">
+<meta property="og:image" content="http://img0.ph.126.net/ZWXvpojeN4s7kwqahOEtUg==/6632348696748343635.png">
+<meta property="og:image" content="http://img2.ph.126.net/_-LCqjVzfXdiHi4pymd86g==/6632264034353011109.png">
+<meta property="og:image" content="http://img0.ph.126.net/0GG8sodCqRYlP6hok03hLg==/6632652161955013401.png">
+<meta property="article:published_time" content="2020-01-18T08:32:36.000Z">
+<meta property="article:modified_time" content="2020-01-18T08:35:23.701Z">
 <meta property="article:author" content="Simrit">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://img1.ph.126.net/xGEfULhbENU5ABx9lqFyPw==/6632509225445973667.png">
   
     <link rel="alternative" href="/atom.xml" title="Simrit Blog" type="application/atom+xml">
   
@@ -166,16 +198,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-CLARE：一种标签分类和标签推荐的联合方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-CLARE：一种标签分类和标签推荐的联合方法" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/18/CLARE%EF%BC%9A%E4%B8%80%E7%A7%8D%E6%A0%87%E7%AD%BE%E5%88%86%E7%B1%BB%E5%92%8C%E6%A0%87%E7%AD%BE%E6%8E%A8%E8%8D%90%E7%9A%84%E8%81%94%E5%90%88%E6%96%B9%E6%B3%95/">CLARE：一种标签分类和标签推荐的联合方法</a>
+    <h1 class="article-title" itemprop="name">
+      CLARE：一种标签分类和标签推荐的联合方法
     </h1>
   
 
@@ -189,85 +219,153 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>数据分类和标签推荐在处理社交媒体平台上数据的应用。分类是给社交媒体数据分配类别标签，而标签推荐的目的是让标签自动标记这些数据。这两个任务经常被认为是独立的，并且分开处理。然而，数据分类中的标签和标签推荐中的标签本质上是相关的。 </p>
-        
-          <a class="article-more-a" href="/2020/01/18/CLARE%EF%BC%9A%E4%B8%80%E7%A7%8D%E6%A0%87%E7%AD%BE%E5%88%86%E7%B1%BB%E5%92%8C%E6%A0%87%E7%AD%BE%E6%8E%A8%E8%8D%90%E7%9A%84%E8%81%94%E5%90%88%E6%96%B9%E6%B3%95/#more">more >></a>
-        
-      
+ <a id="more"></a>
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/01/18/CLARE%EF%BC%9A%E4%B8%80%E7%A7%8D%E6%A0%87%E7%AD%BE%E5%88%86%E7%B1%BB%E5%92%8C%E6%A0%87%E7%AD%BE%E6%8E%A8%E8%8D%90%E7%9A%84%E8%81%94%E5%90%88%E6%96%B9%E6%B3%95/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Amazon-S3对象存储" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/18/Amazon-S3%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/">Amazon S3对象存储</a>
-    </h1>
-  
-
-        
-        <a href="/2020/01/18/Amazon-S3%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/" class="archive-article-date">
-  	<time datetime="2020-01-18T07:42:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>Amazon S3 提供了一个简单 Web 服务接口，可用于随时在 Web 上的任何位置存储和检索任何数量的数据。</p>
-<h3 id="存储桶"><a href="#存储桶" class="headerlink" title="存储桶"></a>存储桶</h3><p>存储桶是 Amazon S3 中用于存储对象的容器。每个对象都储存在一个存储桶中。例如，如果名为 photos/puppy.jpg 的对象存储在 johnsmith 存储桶中，则可使用 URL <a href="http://johnsmith.s3.amazonaws.com/photos/puppy.jpg" target="_blank" rel="noopener">http://johnsmith.s3.amazonaws.com/photos/puppy.jpg</a> 对该对象进行寻址。<br>用途：</p>
+<p>提供了一种方法来得到数据分类中的标签和标签推荐中的标签之间的关系，并提出了一种框架CLARE，它将数据分类和标签推荐融合到一个统一的模型中。 </p>
+<blockquote>
+<p><strong>CLAssification + REcommendation=CLARE</strong></p>
+</blockquote>
+<p>通过对三个社交媒体数据集的实验，展示了与现有技术相比，CLARE在数据分类和标签推荐上都展现出了卓越的性能。</p>
+<blockquote>
+<p><strong>数据分类：label<br>标签推荐：tag</strong> </p>
+</blockquote>
+<p>对于社交媒体中的数据，分类中的标签通常会捕获其高级内容，而标签推荐中的标签则是描述其属性，如图像中的对象，视频中的动作和博客中的关键字。</p>
+<p>传统的方法分开来处理这两个问题，分类使用数据及其labels来学习分类器，而标签推荐使用数据及其tags来学习标签预测器。如图（a）。<br><img src="http://img1.ph.126.net/xGEfULhbENU5ABx9lqFyPw==/6632509225445973667.png" alt="此处输入图片的描述"><br>CLARE模型通过利用数据，label，tag和label与tag之间的关系来共同执行分类和标签推荐。如图（b）<br><img src="http://img1.ph.126.net/4i0sSxrnIO5USJ4biN43LQ==/6632382781608759847.png" alt="此处输入图片的描述"></p>
+<p>本论文研究的两个问题</p>
+<ol>
+<li>如何得到label和tag之间的数学关系</li>
+<li>如何利用它们的数学关系将标签分类和标签推荐结合起来</li>
+</ol>
+<hr>
+<h2 id="CLARE模型"><a href="#CLARE模型" class="headerlink" title="CLARE模型"></a>CLARE模型</h2><ul>
+<li>$X\in\mathbb{R}^{n×d}$ 表示一组数据（图片，视频，博客），其中n是数据的数量，d是特征的数量。</li>
+<li>$Y_t\in\mathbb{R}^{n×c_1}$ 数据-tag矩阵，n是数据的数量，$c_1$是tag的数量。如果第i个数据被贴上第j个tag，则$Y_t(i,j)=1$，否则$Y_t(i,j)=0$</li>
+<li>$Y_c\in\mathbb{R}^{n×c_2}$ 表示类标签归属矩阵，其中$c_2$是labels的数量。如果第i个数据被标记为第j类，则$Y_c(i,j)=1$，否则$Y_c(i,j)=0$</li>
+</ul>
+<h3 id="基础模型"><a href="#基础模型" class="headerlink" title="基础模型"></a>基础模型</h3><p>对于分类，我们假设有一个线性分类器$W_c\in\mathbb{R}^{d×c_2}$将$X$映射到$Y_c$，$Y_c = XW_c$。 $W_c$可以通过解决以下优化问题得到：</p>
+<p><img src="http://img1.ph.126.net/66V-sc2EoL-n1_JJFGXEiA==/2598014035058228137.png" alt="此处输入图片的描述"></p>
+<p>其中L（）是损失函数，Ω是正则化项，避免过拟合。<br>对于标签推荐，假设存在线性函数$W_t\in\mathbb{R}^{d×c_1}$，这个函数反映了$X$和$Y_t$之间的关系,$Y_t = XW_t$。也是通过最优化来求$W_t$</p>
+<p><img src="http://img2.ph.126.net/xPImkTLGnQmPlFG9fD2msg==/1275926069448274412.png" alt="eq2"></p>
+<p>组合式（1）和式（2），我们可以得到一个统一的分类和标签推荐的基本模型：</p>
+<p><img src="http://img1.ph.126.net/ajmPxC-gCtqlVdM1raO6pQ==/6632267332887894457.png" alt="eq3"></p>
+<blockquote>
 <ul>
-<li><p>它们在最高级别组织 Amazon S3 命名空间。</p>
-</li>
-<li><p>标识负责存储和数据传输费用的账户。</p>
-</li>
-<li><p>在访问控制中发挥作用。</p>
-</li>
-<li><p>用作使用情况报告的聚合单元。</p>
-        
-          <a class="article-more-a" href="/2020/01/18/Amazon-S3%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/#more">more >></a>
-        
+<li>$Y=[Y_t,Y_c]\in\mathbb{R}^{n×(c_1+c_2)}$ </li>
+<li>$W=[W_t,W_c]\in\mathbb{R}^{d×(c_1+c_2)}$</li>
+</ul>
+</blockquote>
+<p>虽然将分类和标签推荐的基本模型重写为统一的形式，但是它们依然是两个独立的任务，因为没有得到这两个任务之间的任何关系</p>
+<p>###寻找Labels和Tags之间的关系<br>寻找到label和tag之间的关系，利用这种关系就能将分类和标签推荐联系起来，进一步能够构建出同时进行分类和标签推荐的统一模型。</p>
+<p>label和tag之间的关系可以用二分图表示。（Figure1B） $B\in\mathbb{R}^{c_2×c_1}$表示图的邻接矩阵，如果第i个label和第j个tag共同出现在同一个数据中，$B(i,j)=1$，否则$B(i,j)=0$。从二分图中，我们可以找到具有相似属性的一组label和tag。</p>
+<blockquote>
+<p>二分图是图论中的一种特殊模型。 设 G=(V,E) 是一个无向图，如果顶点V可分割为两个互不相交的子集  (U,V)，并且图中的每条边 (i,j) 所关联的两个顶点i和j分别属于这两个不同的顶点集 ( i in U, j in  V)，则称图G 为一个二分图。<br><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Simple-bipartite-graph.svg/200px-Simple-bipartite-graph.svg.png" alt="此处输入图片的描述"></p>
+</blockquote>
+<p>在$W$中，$W_c(i,j)$表示第$i$个特征在预测这个数据被标记为第$j$个label时影响程度;而$W_t(i,k)$表示第$i$个特征对这个数据被标记为第$k$个tag的影响程度。因此，我们可以对$W$添加约束，这些约束来源于二分图上的组信息，以此得到label和tag之间的关系.</p>
+<p>从二分图中提取组，对于第$i$个label，将该label和在二分图中连接到该label的所有tag视为一个组，即$B(i,j)=1$的组。注意，一个tag可以连接到多个label，因此通过上述过程形成的组具有重叠。 设$\mathscr{G}$是我们从label-tag二分图中检测到的组的集合，最小化（4）以得到labels和tags之间的关系:</p>
+<p><img src="http://img1.ph.126.net/zPg2uueV7CcsPcgvbwtJSQ==/6632500429352958799.png" alt="eq4"></p>
+<p>其中$α_g$是第$g$个组的置信度，$w_g^i$表示将第i个特征预测为第g个组的权值组成的向量。对所有组的w求2范式得到label-tag之间的关系。<br>$g$ = {1, 5, 9}，$w_g^i$ = $[W(i, 1), W(i, 5), W(i, 9)]$</p>
+<blockquote>
+<p>2-范数: $||x||<em>2=\sqrt{\sum</em>{i=0}^N x_i^2}$  ,Euclid范数（欧几里得范数，常用计算向量长度）是指向量各元素的平方和然后求平方根。</p>
+</blockquote>
+<p>将获取labels和tags之间关系这一项加入到之前的模型，我们得到了联合分类和标签推荐的模型：</p>
+<p><img src="http://img1.ph.126.net/ukHBUN1wkPHUUL7jSmREOw==/6632718132652678552.png" alt="eq5"></p>
+<p>第一项和第二项是分类和标签推荐的基本模型；第三项求得两个任务的关系。参数α控制第三项占整个模型的比重。</p>
+<p>在本文中选择<strong>平方损失</strong>作为损失函数$L$和$F$范数的平方作为正则化项Ω。CLARE的优化问题可以重写为：</p>
+<p><img src="http://img1.ph.126.net/DPikRVnABXFtZ8_KHUzWiA==/2608710084173233702.png" alt="eq6"></p>
+<blockquote>
+<p>F-范数：$||A||<em>F=(tr(A^TA))^\frac12=(\sum</em>{i=1}^m\sum_{j=1}^nA_{i,j}^2)^\frac12$,Frobenius范数，即矩阵元素的平方和再开方。</p>
+</blockquote>
+<p>##CLARE的优化算法<br>由于组结构重叠，因此直接优化目标函数是困难的，采用交替方向乘子法（ADMM）来优化目标函数。</p>
+<blockquote>
+<p> ADMM 通过分解协调（Decomposition-Coordination）过程，将大的全局问题分解为多个较小、较容易求解的局部子问题，并通过协调子问题的解而得到全局问题的解</p>
+</blockquote>
+<p>引入辅助变量$V\in\mathbb{R}^{d×c_2(c_1+c_2)}$，对于每个子问题$i$， 我们将组约束编码为具有和组大小相同维度的$V_i$。 因此，ADMM最小化的目标函数是：</p>
+<p><img src="http://img0.ph.126.net/tDr3M_8n_pFPDb0Ejd-iJQ==/6632239845095432190.png" alt="eq7"></p>
+<p>其中$α<em>j$表示第$j$组的置信度，$M\in{0,1}^{(c_1+c_2×c_2(c_1+c_2)}$定义为：如果第$i$个tag连接到第$j$个label，则$M(i,(c_1+c_2)(j-1)+i)=1$，否则为零。在下文中，为了简化，设$α_j=α，∀j$。<br>使$Ω</em>{group}（V）$表示组正则项，将$Ω_{reg}$表示W的正则项。 为了应用ADMM，我们在公式7应用增广拉格朗日法：</p>
+<blockquote>
+<p>增广拉格朗日方法在拉格朗日方法的基础上添加了二次惩罚项</p>
+</blockquote>
+<p><img src="http://img0.ph.126.net/k679ASiKj5DYvqjfLhlbFw==/1282399993912621518.png" alt="eq8"></p>
+<p>其中$μ$是拉格朗日乘子，$ρ$是控制二次惩罚项的参数。</p>
+<hr>
+<h3 id="更新W"><a href="#更新W" class="headerlink" title="更新W"></a>更新W</h3><p>如果$V和μ$是确定的，约束与$W$无关。因此，我们可以单独优化$W$，忽略没有$W$的项，推导如下：</p>
+<p><img src="http://img2.ph.126.net/6sHh9pU6wNtF738OYtfNMQ==/90634942519714925.png" alt="eq9"></p>
+<p>令$J(W)$的推导后的式子等于零，得到如下形式：</p>
+<p><img src="http://img0.ph.126.net/qqyTB7HjnnQw2c__iU5lmw==/90634942519714929.png" alt="eq10"></p>
+<p>在等式10中，求解W很困难。 另外，$X^TX+\frac12βI$和$\fracρ2MM^T+\frac12βI$是对称且正定的。 因此，我们对它们使用特征分解：</p>
+<p><img src="http://img0.ph.126.net/GtGytMjEp7FjMJAZq4b5Ug==/91197892473123363.png" alt="eq11"></p>
+<p>$U_1,U_2$是特征向量，$Λ_1，Λ_2$是对角矩阵,他们的对角线上是特征值。将分解后的矩阵带入等式10：</p>
+<p><img src="http://img0.ph.126.net/ENE2My3heT1x3Wsk9faJbw==/6632255238259985712.png" alt="eq12"></p>
+<p>左乘$U_1^T$，右乘$U_2$，并让$\widetilde{W}= U_1^TWU_2 ， Q = U_1^T [X^TY+\fracρ2(V+\fracμρ)M^T ]U_2$</p>
+<p><img src="http://img2.ph.126.net/r5M4_ApqpxEQWL5fE8SMWQ==/6632231049004173323.png" alt="eq13"></p>
+<p>$\widetilde{W},W$：</p>
+<p><img src="http://img1.ph.126.net/0dgSdaimaHH4GKN0AEDmZw==/6632709336559656415.png" alt="eq14-15"></p>
+<blockquote>
+<p>$λ^s_1$是$X^TX+\frac12βI$的第$s$个特征值，$λ^l_2$是$\fracρ2MM^T+\frac12βI$的第$l$个特征值</p>
+</blockquote>
+<h3 id="更新V"><a href="#更新V" class="headerlink" title="更新V"></a>更新V</h3><p>如果$W和μ$是确定的，则可以通过以下优化问题获得V：</p>
+<p><img src="http://img1.ph.126.net/AgBEu9OpaUoecyZWVRAa6g==/1282399993912621519.png" alt="eq16"></p>
+<p><img src="http://img1.ph.126.net/kRM3Tua_67NSSo9k4fOUew==/6632587290771579814.png" alt="eq17"></p>
+<p><img src="http://img1.ph.126.net/r8wpCYmv6ZLYZdEQL5z_CQ==/6632660958048032350.png" alt="eq18"></p>
+<h3 id="更新μ"><a href="#更新μ" class="headerlink" title="更新μ"></a>更新μ</h3><p>使用$μ=μ+ρ（V-WM）$更新$μ$。根据更新规则，得到CLARE的算法。<br><img src="http://img2.ph.126.net/yQU43vG2f9COOxkZHUI9tw==/6632718132652678553.png" alt="算法"></p>
+<hr>
+<h3 id="收敛分析"><a href="#收敛分析" class="headerlink" title="收敛分析"></a>收敛分析</h3><p>实验结果表明，算法对用于评估的所有数据集通常在100次迭代内收敛。</p>
+<h3 id="时间复杂度分析"><a href="#时间复杂度分析" class="headerlink" title="时间复杂度分析"></a>时间复杂度分析</h3><p>W的主要计算成本包括$X^TX+\frac12βI$和$\fracρ2MM^T+\frac12βI$的特征分解和计算$Q = U_1^T [X^TY+\fracρ2(V+\fracμρ)M^T ]U_2$。 特征分解的时间复杂度为$O(d^3)$。计算Q的时间复杂度是$O(nd^2)$ 在算法1中，仅在循环之前计算一次特征分解。 由于M的稀疏性，Q的计算成本为$O(nd^2)$。V的计算取决于每组内的近似方法。 由于对于每个特征维度，共c2个c1+c2大小的组，所以V的总计算成本为$O(dc_2(c_1+c_2))$。$V$可以针对每个特征维度并行计算。 类似地，$μ$的计算成本取决于$WM$的计算，其为$O(dc_1^2)$。</p>
+<h2 id="实验分析"><a href="#实验分析" class="headerlink" title="实验分析"></a>实验分析</h2><ul>
+<li>将CLARE与常用的标签推荐和分类的方法进行比较。 </li>
+<li>研究CLARE中重要参数的影响。</li>
+</ul>
+<h3 id="实验设置"><a href="#实验设置" class="headerlink" title="实验设置"></a>实验设置</h3><h4 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h4><p><strong>USAA-YouTube dataset</strong><br>数据集中的所有1500个视频来自YouTube，都是非结构化和未编辑的。 有8个种类的label， 这8类label是生日聚会，毕业派对，音乐表演，非音乐表演，游行，婚礼，婚礼舞蹈和婚礼接待。 有69个手动标记的tag，例如：跳舞，吃饭，快速移动，花园，客厅，谈话，演示，新娘，国旗和蜡烛。<br><strong>NUS-Flickr dataset</strong><br>它包含从Flickr爬取的269,648张图片。图片链接到5,000个不同的tags，这些tags由在Flickr上的用户标记。这些图片一共有81个类别，每幅图片都有一个label表示它所属的类别。在实验中使用最常见的1000个tags，过滤掉小于7个tag的图片，得到了11万幅图片。<br><img src="http://img2.ph.126.net/Au0Hre4vk-2YyWOvz40jhQ==/3079617720210173552.jpg" alt="此处输入图片的描述"><br><img src="http://img2.ph.126.net/ciWgxq33vCIPrJfd5rqoSA==/1036390864267524119.png" alt="此处输入图片的描述"><br><strong>Shoe-Zappo dataset</strong><br>它是一个大型鞋类数据集，由Zappos.com收集的50,025个图像组成。图像分为皮鞋，凉鞋，拖鞋和靴子四大类。tags的数量共147个，是类型和品牌，如高跟，牛津，皮革，耐克。</p>
+<h3 id="性能度量"><a href="#性能度量" class="headerlink" title="性能度量"></a>性能度量</h3><ul>
+<li>Classification：精度</li>
+<li>Tag recommendation：$AP@K$</li>
+</ul>
+<p>使用精度作为衡量分类性能的指标。<br>使用K个tags的平均精度AP@K作为评估指标。<br>###性能比较<br>CLARE与以下算法进行比较：</p>
+<ul>
+<li>SVM</li>
+<li>GLasso</li>
+<li>sLDA</li>
+<li>LS</li>
+<li>FT</li>
+<li>RD</li>
+</ul>
+<p>对于所有的baseline，使用交叉验证来得到它们的精度。每次选择60％的数据集作为训练数据，剩下的作为测试数据。</p>
+<p><img src="http://img1.ph.126.net/Qld7itTvk9AMTayJuW6CoQ==/6632438856701826916.png" alt="此处输入图片的描述"></p>
+<p><img src="http://img0.ph.126.net/ZWXvpojeN4s7kwqahOEtUg==/6632348696748343635.png" alt="此处输入图片的描述"></p>
+<p>###参数分析<br>CLARE 两个重要参数：</p>
+<blockquote>
+<ul>
+<li>$α$用于控制获取label和tag之间关系的这一项对整个模型的贡献 </li>
+<li>$β$控制正则化惩罚项。</li>
+</ul>
+</blockquote>
+<p><strong>α对性能的影响</strong><br>$β=0.1$<br><img src="http://img2.ph.126.net/_-LCqjVzfXdiHi4pymd86g==/6632264034353011109.png" alt="此处输入图片的描述"></p>
+<p><strong>β对性能的影响</strong><br>$α=0.3$<br><img src="http://img0.ph.126.net/0GG8sodCqRYlP6hok03hLg==/6632652161955013401.png" alt="此处输入图片的描述"></p>
+<p>##总结<br>基于label和tag之间的关系，研究了联合分类和标签推荐的问题。我们从label-tag二分图中提取组信息作为约束，将分类和标签推荐联系起来，并提出了一种同时执行分类和标签推荐的模型CLARE。 三个数据集的实验表明：<br>（1）联合分类和推荐可以提高每个任务的性能;<br>（2）labels和tags之间关系的重要性。 </p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -276,16 +374,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/01/18/Amazon-S3%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://simrit518.github.io/2020/01/18/CLARE%EF%BC%9A%E4%B8%80%E7%A7%8D%E6%A0%87%E7%AD%BE%E5%88%86%E7%B1%BB%E5%92%8C%E6%A0%87%E7%AD%BE%E6%8E%A8%E8%8D%90%E7%9A%84%E8%81%94%E5%90%88%E6%96%B9%E6%B3%95/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/01/18/Amazon-S3%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Amazon S3对象存储</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -300,93 +457,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-压缩算法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/18/%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95/">压缩算法</a>
-    </h1>
-  
-
-        
-        <a href="/2020/01/18/%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2020-01-18T03:29:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>在不改变原有文件属性的前提下，降低文件字节空间和占用空间的一种算法。</p>
-<h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><h3 id="有损和无损"><a href="#有损和无损" class="headerlink" title="有损和无损"></a>有损和无损</h3><ul>
-<li><p>无损压缩：能够无失真地从压缩后的数据重构，准确地还原原始数据。可用于对数据的准确性要求严格的场合，如可执行文件和普通文件的压缩、磁盘的压缩，也可用于多媒体数据的压缩。该方法的压缩比较小。如差分编码、RLE、Huffman编码、LZW编码、算术编码。</p>
-</li>
-<li><p>有损压缩：有失真，不能完全准确地恢复原始数据，重构的数据只是原始数据的一个近似。可用于对数据的准确性要求不高的场合，如多媒体数据的压缩。该方法的压缩比较大。例如预测编码、音感编码、分形压缩、小波压缩、JPEG/MPEG。</p>
-        
-          <a class="article-more-a" href="/2020/01/18/%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术调研//" class="article-tag-list-link color5">技术调研</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/01/18/%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Introduction"><span class="toc-number">1.</span> <span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CLARE模型"><span class="toc-number">2.</span> <span class="toc-text">CLARE模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基础模型"><span class="toc-number">2.1.</span> <span class="toc-text">基础模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#更新W"><span class="toc-number">2.2.</span> <span class="toc-text">更新W</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#更新V"><span class="toc-number">2.3.</span> <span class="toc-text">更新V</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#更新μ"><span class="toc-number">2.4.</span> <span class="toc-text">更新μ</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#收敛分析"><span class="toc-number">2.5.</span> <span class="toc-text">收敛分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#时间复杂度分析"><span class="toc-number">2.6.</span> <span class="toc-text">时间复杂度分析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实验分析"><span class="toc-number">3.</span> <span class="toc-text">实验分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#实验设置"><span class="toc-number">3.1.</span> <span class="toc-text">实验设置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#数据集"><span class="toc-number">3.1.1.</span> <span class="toc-text">数据集</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#性能度量"><span class="toc-number">3.2.</span> <span class="toc-text">性能度量</span></a></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
+  
+  
+  
 
   
+
+  
+
   
 
 
@@ -409,8 +505,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
