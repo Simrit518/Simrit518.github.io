@@ -8,12 +8,12 @@
   <link rel="dns-prefetch" href="http://simrit518.github.io">
   <title>压缩算法 | Simrit Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="定义在不改变原有文件属性的前提下，降低文件字节空间和占用空间的一种算法。 分类有损和无损 无损压缩：能够无失真地从压缩后的数据重构，准确地还原原始数据。可用于对数据的准确性要求严格的场合，如可执行文件和普通文件的压缩、磁盘的压缩，也可用于多媒体数据的压缩。该方法的压缩比较小。如差分编码、RLE、Huffman编码、LZW编码、算术编码。 有损压缩：有失真，不能完全准确地恢复原始数据，重构的数据只是">
+  <meta name="description" content="定义在不改变原有文件属性的前提下，降低文件字节空间和占用空间的一种算法。 分类有损和无损 无损压缩：能够无失真地从压缩后的数据重构，准确地还原原始数据。可用于对数据的准确性要求严格的场合，如可执行文件和普通文件的压缩、磁盘的压缩，也可用于多媒体数据的压缩。该方法的压缩比较小。如差分编码、RLE、Huffman编码、LZW编码、算术编码。  有损压缩：有失真，不能完全准确地恢复原始数据，重构的数据只">
 <meta property="og:type" content="article">
 <meta property="og:title" content="压缩算法">
 <meta property="og:url" content="http://simrit518.github.io/2020/01/18/%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95/index.html">
 <meta property="og:site_name" content="Simrit Blog">
-<meta property="og:description" content="定义在不改变原有文件属性的前提下，降低文件字节空间和占用空间的一种算法。 分类有损和无损 无损压缩：能够无失真地从压缩后的数据重构，准确地还原原始数据。可用于对数据的准确性要求严格的场合，如可执行文件和普通文件的压缩、磁盘的压缩，也可用于多媒体数据的压缩。该方法的压缩比较小。如差分编码、RLE、Huffman编码、LZW编码、算术编码。 有损压缩：有失真，不能完全准确地恢复原始数据，重构的数据只是">
+<meta property="og:description" content="定义在不改变原有文件属性的前提下，降低文件字节空间和占用空间的一种算法。 分类有损和无损 无损压缩：能够无失真地从压缩后的数据重构，准确地还原原始数据。可用于对数据的准确性要求严格的场合，如可执行文件和普通文件的压缩、磁盘的压缩，也可用于多媒体数据的压缩。该方法的压缩比较小。如差分编码、RLE、Huffman编码、LZW编码、算术编码。  有损压缩：有失真，不能完全准确地恢复原始数据，重构的数据只">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://pics4.baidu.com/feed/b64543a98226cffc0a06d1a764fffe95f703eaff.jpeg?token=86e841549184ba2c309da737bdb0ee51&s=C5BC84726E3A7F880AFC63530200C0E6">
 <meta property="og:image" content="http://pics3.baidu.com/feed/f9198618367adab473f26dbf552a07198601e434.jpeg?token=c5b5f7de3ef9628395274e37b8888207&s=163676220D6A550B4CF8E0EA02006033">
@@ -21,7 +21,7 @@
 <meta property="og:image" content="https://img2018.cnblogs.com/blog/683615/201904/683615-20190415173506175-1884040664.png">
 <meta property="og:image" content="https://images2015.cnblogs.com/blog/494924/201510/494924-20151005220043034-96681832.png">
 <meta property="article:published_time" content="2020-01-18T03:29:37.000Z">
-<meta property="article:modified_time" content="2020-01-18T03:35:03.661Z">
+<meta property="article:modified_time" content="2020-01-18T07:54:05.554Z">
 <meta property="article:author" content="Simrit">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://pics4.baidu.com/feed/b64543a98226cffc0a06d1a764fffe95f703eaff.jpeg?token=86e841549184ba2c309da737bdb0ee51&s=C5BC84726E3A7F880AFC63530200C0E6">
@@ -53,7 +53,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/assets/img/photo.jpg" class="js-avatar">
+			<img src="/img/photo.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">Simrit</a></h1>
@@ -115,7 +115,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/assets/img/photo.jpg" class="js-avatar">
+				<img src="/img/photo.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">Simrit</h1>
@@ -192,8 +192,12 @@
       
         <h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>在不改变原有文件属性的前提下，降低文件字节空间和占用空间的一种算法。</p>
 <h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><h3 id="有损和无损"><a href="#有损和无损" class="headerlink" title="有损和无损"></a>有损和无损</h3><ul>
-<li>无损压缩：能够无失真地从压缩后的数据重构，准确地还原原始数据。可用于对数据的准确性要求严格的场合，如可执行文件和普通文件的压缩、磁盘的压缩，也可用于多媒体数据的压缩。该方法的压缩比较小。如差分编码、RLE、Huffman编码、LZW编码、算术编码。</li>
-<li>有损压缩：有失真，不能完全准确地恢复原始数据，重构的数据只是原始数据的一个近似。可用于对数据的准确性要求不高的场合，如多媒体数据的压缩。该方法的压缩比较大。例如预测编码、音感编码、分形压缩、小波压缩、JPEG/MPEG。</li>
+<li><p>无损压缩：能够无失真地从压缩后的数据重构，准确地还原原始数据。可用于对数据的准确性要求严格的场合，如可执行文件和普通文件的压缩、磁盘的压缩，也可用于多媒体数据的压缩。该方法的压缩比较小。如差分编码、RLE、Huffman编码、LZW编码、算术编码。</p>
+</li>
+<li><p>有损压缩：有失真，不能完全准确地恢复原始数据，重构的数据只是原始数据的一个近似。可用于对数据的准确性要求不高的场合，如多媒体数据的压缩。该方法的压缩比较大。例如预测编码、音感编码、分形压缩、小波压缩、JPEG/MPEG。</p>
+<a id="more"></a>
+
+</li>
 </ul>
 <h3 id="对称性"><a href="#对称性" class="headerlink" title="对称性"></a>对称性</h3><p>如果编解码算法的复杂性和所需时间差不多，则为对称的编码方法，多数压缩算法都是对称的。但也有不对称的，一般是编码难而解码容易，如 Huffman 编码和分形编码。</p>
 <h2 id="常用压缩算法介绍"><a href="#常用压缩算法介绍" class="headerlink" title="常用压缩算法介绍"></a>常用压缩算法介绍</h2><h3 id="RLE算法"><a href="#RLE算法" class="headerlink" title="RLE算法"></a>RLE算法</h3><p>把文件内容用 数据 * 重复次数 的形式来表示的压缩方法成为 RLE(Run Length Encoding, 行程长度编码) 算法。RLE 算法是一种很好的压缩方法，经常用于压缩传真的图像等。因为图像文件的本质也是字节数据的集合体，所以可以用 RLE 算法进行压缩<br><img src="http://pics4.baidu.com/feed/b64543a98226cffc0a06d1a764fffe95f703eaff.jpeg?token=86e841549184ba2c309da737bdb0ee51&s=C5BC84726E3A7F880AFC63530200C0E6" alt=""></p>
@@ -327,6 +331,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2020/01/18/Amazon-S3%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Amazon S3对象存储
+        
+      </div>
+    </a>
   
   
     <a href="/2020/01/18/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
@@ -528,7 +541,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">那些将要去的地方，都是素未谋面的故乡。</div>
   	  	
     	</section>
     

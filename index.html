@@ -43,7 +43,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/assets/img/photo.jpg" class="js-avatar">
+			<img src="/img/photo.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">Simrit</a></h1>
@@ -105,7 +105,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/assets/img/photo.jpg" class="js-avatar">
+				<img src="/img/photo.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">Simrit</h1>
@@ -162,6 +162,80 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Amazon-S3对象存储" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/01/18/Amazon-S3%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/">Amazon S3对象存储</a>
+    </h1>
+  
+
+        
+        <a href="/2020/01/18/Amazon-S3%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/" class="archive-article-date">
+  	<time datetime="2020-01-18T07:42:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>Amazon S3 提供了一个简单 Web 服务接口，可用于随时在 Web 上的任何位置存储和检索任何数量的数据。</p>
+<h3 id="存储桶"><a href="#存储桶" class="headerlink" title="存储桶"></a>存储桶</h3><p>存储桶是 Amazon S3 中用于存储对象的容器。每个对象都储存在一个存储桶中。例如，如果名为 photos/puppy.jpg 的对象存储在 johnsmith 存储桶中，则可使用 URL <a href="http://johnsmith.s3.amazonaws.com/photos/puppy.jpg" target="_blank" rel="noopener">http://johnsmith.s3.amazonaws.com/photos/puppy.jpg</a> 对该对象进行寻址。<br>用途：</p>
+<ul>
+<li><p>它们在最高级别组织 Amazon S3 命名空间。</p>
+</li>
+<li><p>标识负责存储和数据传输费用的账户。</p>
+</li>
+<li><p>在访问控制中发挥作用。</p>
+</li>
+<li><p>用作使用情况报告的聚合单元。</p>
+        
+          <a class="article-more-a" href="/2020/01/18/Amazon-S3%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/01/18/Amazon-S3%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-压缩算法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -184,50 +258,12 @@
       
         <h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>在不改变原有文件属性的前提下，降低文件字节空间和占用空间的一种算法。</p>
 <h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><h3 id="有损和无损"><a href="#有损和无损" class="headerlink" title="有损和无损"></a>有损和无损</h3><ul>
-<li>无损压缩：能够无失真地从压缩后的数据重构，准确地还原原始数据。可用于对数据的准确性要求严格的场合，如可执行文件和普通文件的压缩、磁盘的压缩，也可用于多媒体数据的压缩。该方法的压缩比较小。如差分编码、RLE、Huffman编码、LZW编码、算术编码。</li>
-<li>有损压缩：有失真，不能完全准确地恢复原始数据，重构的数据只是原始数据的一个近似。可用于对数据的准确性要求不高的场合，如多媒体数据的压缩。该方法的压缩比较大。例如预测编码、音感编码、分形压缩、小波压缩、JPEG/MPEG。</li>
-</ul>
-<h3 id="对称性"><a href="#对称性" class="headerlink" title="对称性"></a>对称性</h3><p>如果编解码算法的复杂性和所需时间差不多，则为对称的编码方法，多数压缩算法都是对称的。但也有不对称的，一般是编码难而解码容易，如 Huffman 编码和分形编码。</p>
-<h2 id="常用压缩算法介绍"><a href="#常用压缩算法介绍" class="headerlink" title="常用压缩算法介绍"></a>常用压缩算法介绍</h2><h3 id="RLE算法"><a href="#RLE算法" class="headerlink" title="RLE算法"></a>RLE算法</h3><p>把文件内容用 数据 * 重复次数 的形式来表示的压缩方法成为 RLE(Run Length Encoding, 行程长度编码) 算法。RLE 算法是一种很好的压缩方法，经常用于压缩传真的图像等。因为图像文件的本质也是字节数据的集合体，所以可以用 RLE 算法进行压缩<br><img src="http://pics4.baidu.com/feed/b64543a98226cffc0a06d1a764fffe95f703eaff.jpeg?token=86e841549184ba2c309da737bdb0ee51&s=C5BC84726E3A7F880AFC63530200C0E6" alt=""></p>
-<h4 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h4><p>RLE 算法只针对连续的字节序列压缩效果比较好，但是对一串不相同的字符进行<code>ABCDEFGHIJKLMNOPQRSTUVWXYZ</code>，26个英文字母所占空间应该是 26 个字节，我们用 RLE 压缩算法压缩后的结果为 <code>A1B1C1D1E1F1G1H1I1J1K1L1M1N1O1P1Q1R1S1T1U1V1W1X1Y1Z1</code> ，所占用 52 个字节，压缩完成后的容量没有减少反而增大了！这显然不是我们想要的结果，所以这种情况下就不能再使用 RLE 进行压缩。</p>
-<h3 id="哈夫曼算法"><a href="#哈夫曼算法" class="headerlink" title="哈夫曼算法"></a>哈夫曼算法</h3><p>哈夫曼算法是指，为各压缩对象文件分别构造最佳的编码体系，并以该编码体系为基础来进行压缩。因此，用什么样的编码（哈夫曼编码）对数据进行分割，就要由各个文件而定。用哈夫曼算法压缩过的文件中，存储着哈夫曼编码信息和压缩过的数据。<br><img src="http://pics3.baidu.com/feed/f9198618367adab473f26dbf552a07198601e434.jpeg?token=c5b5f7de3ef9628395274e37b8888207&s=163676220D6A550B4CF8E0EA02006033" alt=""></p>
-<p>在哈夫曼算法中，通过借助哈夫曼树的构造编码体系，下面是一个哈夫曼树的构造过程。<br><img src="http://pics5.baidu.com/feed/c9fcc3cec3fdfc03c2e53c360ac13391a6c226a7.jpeg?token=331a4a58b0ab4eacf337047e9d229082&s=AF89CE021C1F79CC50CB9F51030060F5" alt=""><br>使用哈夫曼树之后，出现频率越高的数据所占用的位数越少，这也是哈夫曼树的核心思想。通过上图的步骤二可以看出，枝条连接数据时，我们是从出现频率较低的数据开始的。这就意味着出现频率低的数据到达根部的枝条也越多。而枝条越多则意味着编码的位数随之增加。<br>接下来我们来看一下哈夫曼树的压缩比率，用上图得到的数据表示 AAAAAABBCDDEEEEEF 为 000000000000 100100 110 101101 0101010101 111，40位 = 5 字节。压缩前的数据是 17 字节，压缩后的数据竟然达到了5 字节，也就是压缩比率 = 5 / 17 = 29%。</p>
-<h3 id="小波压缩算法"><a href="#小波压缩算法" class="headerlink" title="小波压缩算法"></a>小波压缩算法</h3><h4 id="小波概述"><a href="#小波概述" class="headerlink" title="小波概述"></a>小波概述</h4><p>小波”就是小的波形。所谓“小”是指它具有衰减性；而称之为“波”则是指它的波动性，其振幅正负相间的震荡形式。与傅里叶变换相比，小波变换是时间（空间）频率的局部化分析，它通过伸缩平移运算对信号(函数)逐步进行多尺度细化，最终达到高频处时间细分，低频处频率细分，能自动适应时频信号分析的要求，从而可聚焦到信号的任意细节<br>小波变换是一种同时具有时间－频率二维分辨率的变换。是当前应用数学与工程学科中一个迅速发展的新领域。由于小波变换具有良好的<strong>时－频局部化特征</strong>，因此非常适合对静止图像进行处理，具有良好的图像压缩性能</p>
-<blockquote>
-<p>从小波系数矩阵可以看出，小波变换良好的空间-频率局部化特性表现在：<br>（1）频率压缩特性。从频率分解上看，原始图像的能量大部分聚集到低频子带；<br>（2）空间压缩特性。从系数在空间的分布看，高频子带的能量大部分集中在原始图像边缘、轮廓等对应的位置；<br>（3）系数分布相似性。同一方向上各分级高频子带系数幅值分布大体一致。</p>
-</blockquote>
-<p>小波变换的一些优良性能已使得它成为JPEG 2000 的核心编码技术。借助于小波变换，可以把图像信号分解成许多具有不同空间分辨率、频率特性和方向特性的子带信号，实现低频长时特征和高频短时特征的同时处理，使得图像信号的分解更适合于人的视觉特性和数据压缩的要求。</p>
-<h4 id="小波变换和重构"><a href="#小波变换和重构" class="headerlink" title="小波变换和重构"></a>小波变换和重构</h4><p>小波变换或小波分解，实际上就是寻求空间L2 (R)上的标准正交小波基，将信号在这组小波基上分解，以便进行分析和处理，并且还可以通过这些分解系数重建原来的信号。<br>小波变换的基本思想是用一组小波或基函数表示一个函数或信号，例如图像信号。以哈尔（Haar）小波基函数为例，基本哈尔小波函数（Haar wavelet function）定义如下：<br><img src="https://img2018.cnblogs.com/blog/683615/201904/683615-20190415173506175-1884040664.png" alt=""></p>
-<p>设有一幅分辨率只有4个像素的一维图像，对应像素值为：[9  7  3  5]。用哈尔小波变换的过程是：计算相邻像素对的平均值（averaging，亦可称之为近似值approximation），得到一幅分辨率为原图像1/2的新图像：[8  4]。这时图像信息已部分丢失，为了能从2个像素组成的图像重构出4个像素的原图像，必须把每个像素对的第一个像素值减这个像素的平均值作为图像的细节系数（detail coefficient）保存。因此，原图像可用下面的两个平均值和两个细节系数表示：[8  4  1  -1]。可以把第一步变换得到的图像进一步变换，原图像两级变换的过程如表1所示：</p>
-<table>
-<thead>
-<tr>
-<th>分辨率</th>
-<th>平均值</th>
-<th>细节系数</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>4</td>
-<td>[9  7  3  5]</td>
-<td></td>
-</tr>
-<tr>
-<td>2</td>
-<td>[8  4]</td>
-<td>[1  -1]</td>
-</tr>
-<tr>
-<td>1</td>
-<td>[6]</td>
-<td>[2]</td>
-</tr>
-</tbody></table>
-<h4 id="图像压缩"><a href="#图像压缩" class="headerlink" title="图像压缩"></a>图像压缩</h4><p>哈尔变换过程事实上是用求均值和差值的方法对函数或图像进行分解，对于f(x)=[9  7  3  5]，我们可作最多2层的分解。<br>对于2维图像，同样可以用依次对行列进行小波变换得到2维图像的分解。这时经过一次小波变换得到是2维图像的近似值(CA)以及水平(CH)、垂直(CV)和对角(CD)细节分量值。显然，从2维图像的CA、CH、CV和CD值可以重构出原来的2维图像。</p>
-<p>通常在给定小波基函数条件下，阀值越大，系数为0的数目就越多，重构图像文件压缩率也越高，重构的图像失真程度随之增加。<br>阀值&gt;0时，利用小波变换与重构进行图像压缩是一种有损压缩方法，可以根据实际需要在图像失真度允许的范围内选择适当的阀值来确定压缩率。</p>
-<h4 id="Mallat算法"><a href="#Mallat算法" class="headerlink" title="Mallat算法"></a>Mallat算法</h4><p>Mallat 算法可以快速实现数字图像经过二维<br>小波变换的分解与重构过程。如一幅二维离散图<br>像{ c( m，n) } ，二维小波变换可以将它分解为各层各个分辨率上的近似分量cAj，水平方向细节分量cHj，垂直方向细节分量cVj和对角线方向细节分量cDj 。其二层小波图像分解过程见图1，其二层小波图像重构过程正好与此相反，如图2 所示。基于小波变换的图像处理，是通过对图像分解过程中所产生的近似分量与细节分量系数的调整，使重构图像满足特定条件，从而实现对图像的处理。</p>
-<p><img src="https://images2015.cnblogs.com/blog/494924/201510/494924-20151005220043034-96681832.png" alt=""></p>
-
+<li><p>无损压缩：能够无失真地从压缩后的数据重构，准确地还原原始数据。可用于对数据的准确性要求严格的场合，如可执行文件和普通文件的压缩、磁盘的压缩，也可用于多媒体数据的压缩。该方法的压缩比较小。如差分编码、RLE、Huffman编码、LZW编码、算术编码。</p>
+</li>
+<li><p>有损压缩：有失真，不能完全准确地恢复原始数据，重构的数据只是原始数据的一个近似。可用于对数据的准确性要求不高的场合，如多媒体数据的压缩。该方法的压缩比较大。例如预测编码、音感编码、分形压缩、小波压缩、JPEG/MPEG。</p>
+        
+          <a class="article-more-a" href="/2020/01/18/%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95/#more">more >></a>
+        
       
 
       
@@ -496,7 +532,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">那些将要去的地方，都是素未谋面的故乡。</div>
   	  	
     	</section>
     

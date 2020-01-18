@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://simrit518.github.io">
-  <title>Archives: 2020 | Simrit Blog</title>
+  <title>Amazon S3对象存储 | Simrit Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Simrit Blog">
-<meta property="og:url" content="http://simrit518.github.io/archives/2020/index.html">
+  <meta name="description" content="概念Amazon S3 提供了一个简单 Web 服务接口，可用于随时在 Web 上的任何位置存储和检索任何数量的数据。 存储桶存储桶是 Amazon S3 中用于存储对象的容器。每个对象都储存在一个存储桶中。例如，如果名为 photos&#x2F;puppy.jpg 的对象存储在 johnsmith 存储桶中，则可使用 URL http:&#x2F;&#x2F;johnsmith.s3.amazonaws.com&#x2F;photos">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Amazon S3对象存储">
+<meta property="og:url" content="http://simrit518.github.io/2020/01/18/Amazon-S3%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/index.html">
 <meta property="og:site_name" content="Simrit Blog">
+<meta property="og:description" content="概念Amazon S3 提供了一个简单 Web 服务接口，可用于随时在 Web 上的任何位置存储和检索任何数量的数据。 存储桶存储桶是 Amazon S3 中用于存储对象的容器。每个对象都储存在一个存储桶中。例如，如果名为 photos&#x2F;puppy.jpg 的对象存储在 johnsmith 存储桶中，则可使用 URL http:&#x2F;&#x2F;johnsmith.s3.amazonaws.com&#x2F;photos">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-01-18T07:42:25.000Z">
+<meta property="article:modified_time" content="2020-01-18T07:54:07.800Z">
 <meta property="article:author" content="Simrit">
 <meta name="twitter:card" content="summary">
   
@@ -160,103 +164,243 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Amazon-S3对象存储" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Amazon S3对象存储
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/18/Amazon-S3%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/" class="archive-article-date">
+
+        
+        <a href="/2020/01/18/Amazon-S3%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/" class="archive-article-date">
   	<time datetime="2020-01-18T07:42:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-18</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/18/Amazon-S3%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/">Amazon S3对象存储</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>Amazon S3 提供了一个简单 Web 服务接口，可用于随时在 Web 上的任何位置存储和检索任何数量的数据。</p>
+<h3 id="存储桶"><a href="#存储桶" class="headerlink" title="存储桶"></a>存储桶</h3><p>存储桶是 Amazon S3 中用于存储对象的容器。每个对象都储存在一个存储桶中。例如，如果名为 photos/puppy.jpg 的对象存储在 johnsmith 存储桶中，则可使用 URL <a href="http://johnsmith.s3.amazonaws.com/photos/puppy.jpg" target="_blank" rel="noopener">http://johnsmith.s3.amazonaws.com/photos/puppy.jpg</a> 对该对象进行寻址。<br>用途：</p>
+<ul>
+<li><p>它们在最高级别组织 Amazon S3 命名空间。</p>
+</li>
+<li><p>标识负责存储和数据传输费用的账户。</p>
+</li>
+<li><p>在访问控制中发挥作用。</p>
+</li>
+<li><p>用作使用情况报告的聚合单元。</p>
+<a id="more"></a>
 
-        <div class="article-info info-on-right">
-          
-          
+</li>
+</ul>
+<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><p>对象是 Amazon S3 中存储的基本实体。对象由对象数据和元数据组成。数据部分对 Amazon S3 不透明。元数据是一组描述对象的名称-值对。其中包括一些默认元数据（如上次修改日期）和标准 HTTP 元数据（如 Content-Type）。还可以在存储对象时指定自定义元数据。<br>在存储桶中，对象将由键 (名称) 和版本 ID 进行唯一地标识。</p>
+<h3 id="键"><a href="#键" class="headerlink" title="键"></a>键</h3><p>键是指存储桶中对象的唯一标识符。存储桶内的每个对象都只能有一个键。存储桶、键和版本 ID 的组合唯一标识各个对象。因此，可以将 Amazon S3 看作“存储桶 + 键 + 版本”与对象本身之间的基本数据映射。将 Web 服务终端节点、存储桶名、密钥和版本（可选）组合在一起，可唯一地寻址 Amazon S3 中的每个对象。例如，在 URL <a href="http://doc.s3.amazonaws.com/2006-03-01/AmazonS3.wsdl" target="_blank" rel="noopener">http://doc.s3.amazonaws.com/2006-03-01/AmazonS3.wsdl</a> 中，“doc”是存储桶的名称，“2006-03-01/AmazonS3.wsdl”是键。</p>
+<h3 id="区域"><a href="#区域" class="headerlink" title="区域"></a>区域</h3><p>可以选择一个 AWS 区域供 Amazon S3 存储您创建的存储桶。您可以选择一个区域，以便优化延迟、尽可能降低成本或满足法规要求。在某一区域存储的数据元将一直留在该区域，除非特意将其传输到另一区域。例如，存储在欧洲（爱尔兰）区域中的对象将一直留在该区域。</p>
+<h3 id="数据一致性模型"><a href="#数据一致性模型" class="headerlink" title="数据一致性模型"></a>数据一致性模型</h3><h2 id="存储类"><a href="#存储类" class="headerlink" title="存储类"></a>存储类</h2><p>Amazon S3 中的每个对象都有与之关联的存储类。</p>
+<h3 id="经常访问对象的存储类"><a href="#经常访问对象的存储类" class="headerlink" title="经常访问对象的存储类"></a>经常访问对象的存储类</h3><p>对于性能敏感的使用案例 (需要毫秒级访问时间的用例) 和经常访问的数据，Amazon S3提供以下存储类：</p>
+<ul>
+<li>STANDARD — 默认存储类。如果上传对象时未指定存储类，Amazon S3 会分配 STANDARD 存储类。</li>
+<li>REDUCED_REDUNDANCY — 低冗余存储 (RRS) 存储类设计用于可使用低于 STANDARD 存储类的冗余级别存储的非关键性可再生数据。<blockquote>
+<p>RRS对象的平均每年对象损失率为 0.01%。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="可自动优化经常访问和不经常访问的对象的存储类"><a href="#可自动优化经常访问和不经常访问的对象的存储类" class="headerlink" title="可自动优化经常访问和不经常访问的对象的存储类"></a>可自动优化经常访问和不经常访问的对象的存储类</h3><p>INTELLIGENT_TIERING 存储类设计为通过自动将数据移至最经济高效的存储访问层来优化存储成本，不会影响性能或产生运营开销。当访问模式不断变化时，INTELLIGENT_TIERING 会在粒度对象级别在两个访问层（经常访问层与较低成本的不经常访问层）之间移动数据，从而自动实现成本节省。当访问模式未知或不可预测时，如果您要自动为长期存在的数据优化存储成本，INTELLIGENT_TIERING 是理想的存储类。</p>
+<p>INTELLIGENT_TIERING 存储类将对象存储在两个访问层中：一个是针对频繁访问进行了优化的层，另一个是针对不频繁访问的数据进行了优化的更低成本的层。对于每个对象的小额月度监控和自动化费用，Amazon S3 监控 INTELLIGENT_TIERING 存储类中对象的访问模式，然后将连续 30 天未访问的对象移至不频繁访问层。使用 INTELLIGENT_TIERING 存储类时没有检索费用。如果不频繁访问层中的对象被访问，则对象将自动移回频繁访问层。在 INTELLIGENT_TIERING 存储类中的访问层之间移动对象时，不会产生额外的分层费用。</p>
+<p>###不经常访问对象的存储类<br>STANDARD_IA 和 ONEZONE_IA 存储类用于长时间运行且不经常访问的数据。(IA 表示不经常访问。) STANDARD_IA 和 ONEZONE_IA 对象可用于毫秒级访问（类似于 STANDARD 存储类）。Amazon S3 会对这些对象收取检索费用，所以它们最适合用于不常访问的数据。</p>
+<ul>
+<li>STANDARD_IA — Amazon S3 跨多个地理位置独立的可用区存储冗余对象数据（类似于 STANDARD 存储类）。STANDARD_IA 对象可在出现可用区丢失时复原。此存储类可提供比 ONEZONE_IA 类更好的可用性和弹性。</li>
+<li>ONEZONE_IA — Amazon S3 只在一个可用区存储对象数据，因此比 STANDARD_IA 更便宜。但是，数据无法灵活地应对由于地震和洪水灾害而造成可用区物理丢失的情况。ONEZONE_IA 存储类和 STANDARD_IA 一样具有持久性，但是可用性和弹性较差。</li>
+</ul>
+<h3 id="用于存档对象的存储类"><a href="#用于存档对象的存储类" class="headerlink" title="用于存档对象的存储类"></a>用于存档对象的存储类</h3><p><strong>GLACIER</strong> 和 <strong>DEEP_ARCHIVE</strong> 存储类专为低成本数据存档而设计。这些存储类提供与 STANDARD 存储类相同的持久性和弹性。<br>这些存储类在以下方面有所不同：</p>
+<ul>
+<li>GLACIER — 用于可能需要在几分钟内检索其部分数据的存档。存储在 GLACIER 存储类中的数据的最短存储持续时间为 90 天，使用加速检索只需 1-5 分钟即可访问。</li>
+<li>DEEP_ARCHIVE — 用于存档很少需要访问的数据。存储在 DEEP_ARCHIVE 存储类中的数据的最短存储持续时间为 180 天，默认检索时间为 12 小时。<blockquote>
+<p>DEEP_ARCHIVE 是 AWS 中最低成本的存储选项。</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="对象生命周期管理"><a href="#对象生命周期管理" class="headerlink" title="对象生命周期管理"></a>对象生命周期管理</h2><p>生命周期配置 是一组规则，用于定义 Amazon S3 对一组对象应用的操作。有两种类型的操作：</p>
+<ul>
+<li>转换操作 — 定义对象转换为另一个存储类的时间。例如，您可以选择在对象创建 30 天后将其转换为 STANDARD_IA 存储类，或在对象创建 1 年后将其存档到 GLACIER 存储类。</li>
+<li>过期操作 — 定义对象的过期时间。Amazon S3 将代表您删除过期的对象。</li>
+</ul>
+<blockquote>
+<p>使用场景</p>
+<ul>
+<li>将定期日志上传到一个存储桶，应用程序可能需要使用这些日志一个星期或一个月。之后需要删除这些日志。</li>
+<li>在限定的时间段内可能需要经常访问某些文档。自此之后，这些文档很少被访问。有时，您可能不需要对这些文档进行实时访问，但是您的组织或法规可能要求您将它们存档一段特定的时间。之后，您可以删除这些文档。</li>
+</ul>
+</blockquote>
+<h2 id="对象操作"><a href="#对象操作" class="headerlink" title="对象操作"></a>对象操作</h2><h3 id="获取对象"><a href="#获取对象" class="headerlink" title="获取对象"></a>获取对象</h3><ul>
+<li>检索整个对象 — 单次 GET 操作即可为您返回 Amazon S3 中存储的整个对象。</li>
+<li>检索分段中的对象 — 通过在 GET 请求中使用 Range HTTP 标头，您可以检索存储在 Amazon S3 中的对象的特定字节范围。<h3 id="上传对象"><a href="#上传对象" class="headerlink" title="上传对象"></a>上传对象</h3></li>
+<li>在单个操作中上传对象 — 借助单个 PUT 操作，您可以上传多达 5 GB 的对象。</li>
+<li>分段上传对象 — 您可以使用分段上传 API 来上传多达 5 TB 的大型对象。分段上传 API 旨在改进大型对象的上传体验。您可以分段上传对象。这些对象分段可以按任何顺序并行独立上传。您可以对大小在 5 MB 到 5 TB 范围内的对象使用分段上传。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.amazonaws.AmazonServiceException;</span><br><span class="line"><span class="keyword">import</span> com.amazonaws.SdkClientException;</span><br><span class="line"><span class="keyword">import</span> com.amazonaws.regions.Regions;</span><br><span class="line"><span class="keyword">import</span> com.amazonaws.services.s3.AmazonS3;</span><br><span class="line"><span class="keyword">import</span> com.amazonaws.services.s3.AmazonS3ClientBuilder;</span><br><span class="line"><span class="keyword">import</span> com.amazonaws.services.s3.model.ObjectMetadata;</span><br><span class="line"><span class="keyword">import</span> com.amazonaws.services.s3.model.PutObjectRequest;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UploadObject</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        Regions clientRegion = Regions.DEFAULT_REGION;</span><br><span class="line">        String bucketName = <span class="string">"*** Bucket name ***"</span>;</span><br><span class="line">        String stringObjKeyName = <span class="string">"*** String object key name ***"</span>;</span><br><span class="line">        String fileObjKeyName = <span class="string">"*** File object key name ***"</span>;</span><br><span class="line">        String fileName = <span class="string">"*** Path to file to upload ***"</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">//This code expects that you have AWS credentials set up per:</span></span><br><span class="line">            <span class="comment">// https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/setup-credentials.html</span></span><br><span class="line">            AmazonS3 s3Client = AmazonS3ClientBuilder.standard()</span><br><span class="line">                    .withRegion(clientRegion)</span><br><span class="line">                    .build();</span><br><span class="line"></span><br><span class="line">            <span class="comment">// Upload a text string as a new object.</span></span><br><span class="line">            s3Client.putObject(bucketName, stringObjKeyName, <span class="string">"Uploaded String Object"</span>);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// Upload a file as a new object with ContentType and title specified.</span></span><br><span class="line">            PutObjectRequest request = <span class="keyword">new</span> PutObjectRequest(bucketName, fileObjKeyName, <span class="keyword">new</span> File(fileName));</span><br><span class="line">            ObjectMetadata metadata = <span class="keyword">new</span> ObjectMetadata();</span><br><span class="line">            metadata.setContentType(<span class="string">"plain/text"</span>);</span><br><span class="line">            metadata.addUserMetadata(<span class="string">"x-amz-meta-title"</span>, <span class="string">"someTitle"</span>);</span><br><span class="line">            request.setMetadata(metadata);</span><br><span class="line">            s3Client.putObject(request);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (AmazonServiceException e) &#123;</span><br><span class="line">            <span class="comment">// The call was transmitted successfully, but Amazon S3 couldn't process </span></span><br><span class="line">            <span class="comment">// it, so it returned an error response.</span></span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (SdkClientException e) &#123;</span><br><span class="line">            <span class="comment">// Amazon S3 couldn't be contacted for a response, or the client</span></span><br><span class="line">            <span class="comment">// couldn't parse the response from Amazon S3.</span></span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="复制对象"><a href="#复制对象" class="headerlink" title="复制对象"></a>复制对象</h3><p>复制操作将创建已存储在 Amazon S3 中的对象的副本。在单个原子操作中，您可以创建最大 5 GB 的对象副本。但是，对于复制大于 5 GB 的对象，您必须使用分段上传 API。</p>
+<h3 id="列出对象键"><a href="#列出对象键" class="headerlink" title="列出对象键"></a>列出对象键</h3><p>可以按前缀列出键。通过为相关键的名称选择一个通用前缀，并使用用于划定层次结构的特殊字符来标记这些键，您可以使用列表操作来按层次结构选择和浏览键。这类似于在文件系统的目录中存储文件的方式。</p>
+<h3 id="删除对象"><a href="#删除对象" class="headerlink" title="删除对象"></a>删除对象</h3><p>直接从 Amazon S3 删除一个或多个对象。<br>从未受版本控制的存储桶删除对象时，您只需提供对象键名；从受版本控制的存储桶删除对象时，您可以选择提供对象的版本 ID 以删除特定版本的对象。</p>
+<h3 id="从对象中选择内容"><a href="#从对象中选择内容" class="headerlink" title="从对象中选择内容"></a>从对象中选择内容</h3><h3 id="还原存档对象"><a href="#还原存档对象" class="headerlink" title="还原存档对象"></a>还原存档对象</h3><p>归档到 GLACIER 或 DEEP_ARCHIVE 存储类的对象无法实时访问。您必须首先启动还原请求，然后耐心等待，直到对象的临时副本根据您在请求中指定的持续时间（天数）变为可用。</p>
+<h3 id="查询存档对象"><a href="#查询存档对象" class="headerlink" title="查询存档对象"></a>查询存档对象</h3><p>利用 POST Object restore select 类型，针对由 Amazon S3 存档到 Glacier 的数据，可以直接使用简单的结构化查询语言 (SQL) 语句执行筛选操作。当您对存档对象进行 SQL 查询时，select 会就地运行该查询，并将输出结果写入一个 S3 存储桶中。您可以针对存储在 Glacier 中的数据运行查询和自定义分析，而不必将整个对象还原到 Amazon S3。<br>当您执行 select 查询时，Glacier 会提供三个数据访问层 — 加速、标准和批量。所有这些层提供不同的数据访问时间和成本，您可以根据您希望数据可用的速度选择其中任何一个层。</p>
+<h3 id="共享对象"><a href="#共享对象" class="headerlink" title="共享对象"></a>共享对象</h3><p>对象所有者可以选择使用自己的安全凭证来创建预签名的 URL，以授予有限时间内的下载对象权限，从而与其他用户共享对象。<br>当您为对象创建预签名的 URL 时，必须提供安全凭证、指定存储桶名称和对象键、指定 HTTP 方法（指定为 GET 以下载对象）和过期日期和时间。预签名 URL 仅在指定的持续时间内有效。</p>
+<h2 id="存储类分析"><a href="#存储类分析" class="headerlink" title="存储类分析"></a>存储类分析</h2><p>Amazon S3 分析功能可观察数据访问模式以帮助您确定何时将不常访问的 STANDARD 存储转换为 STANDARD_IA (IA，适用于不常访问) 存储类。<br>在存储类分析观察一组筛选出的数据的不常访问模式一段时间后，您可以使用分析结果来帮助改进您的生命周期策略。您可以将存储类分析配置为分析存储桶中的所有对象。或者，也可以配置筛选条件以按通用前缀 (即，名称以通用字符串开头的对象)、对象标签或前缀和标签的组合对对象进行分组以便进行分析。</p>
+<p>对不常访问的对象执行分析时，存储类分析基于期限查看已分组的筛选的对象集，因为这些对象已上传到 Amazon S3。存储类分析通过查看筛选的数据集的以下因素来确定是否不常访问期限组：</p>
+<ul>
+<li>STANDARD 存储类中的大于 128K 的对象。</li>
+<li>每个期限组内的平均总存储量。</li>
+<li>每个期限组传出的平均字节数 (非频率)。</li>
+<li>分析导出数据仅包含与存储类分析有关的数据请求。这可能导致相对于存储指标所示或您自己内部系统的跟踪结果，请求数量以及上传和请求总字节数存在差异。</li>
+<li>失败的 GET 和 PUT 请求不计入分析。但是，您会在存储指标中看到失败的请求。</li>
+</ul>
 
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://simrit518.github.io/2020/01/18/Amazon-S3%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/18/%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2020-01-18T03:29:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-18</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/01/18/%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">压缩算法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/18/%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95/">压缩算法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概念"><span class="toc-number">1.</span> <span class="toc-text">概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#存储桶"><span class="toc-number">1.1.</span> <span class="toc-text">存储桶</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#对象"><span class="toc-number">1.2.</span> <span class="toc-text">对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#键"><span class="toc-number">1.3.</span> <span class="toc-text">键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#区域"><span class="toc-number">1.4.</span> <span class="toc-text">区域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据一致性模型"><span class="toc-number">1.5.</span> <span class="toc-text">数据一致性模型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#存储类"><span class="toc-number">2.</span> <span class="toc-text">存储类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#经常访问对象的存储类"><span class="toc-number">2.1.</span> <span class="toc-text">经常访问对象的存储类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#可自动优化经常访问和不经常访问的对象的存储类"><span class="toc-number">2.2.</span> <span class="toc-text">可自动优化经常访问和不经常访问的对象的存储类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用于存档对象的存储类"><span class="toc-number">2.3.</span> <span class="toc-text">用于存档对象的存储类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对象生命周期管理"><span class="toc-number">3.</span> <span class="toc-text">对象生命周期管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对象操作"><span class="toc-number">4.</span> <span class="toc-text">对象操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#获取对象"><span class="toc-number">4.1.</span> <span class="toc-text">获取对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#上传对象"><span class="toc-number">4.2.</span> <span class="toc-text">上传对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#复制对象"><span class="toc-number">4.3.</span> <span class="toc-text">复制对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#列出对象键"><span class="toc-number">4.4.</span> <span class="toc-text">列出对象键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除对象"><span class="toc-number">4.5.</span> <span class="toc-text">删除对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#从对象中选择内容"><span class="toc-number">4.6.</span> <span class="toc-text">从对象中选择内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#还原存档对象"><span class="toc-number">4.7.</span> <span class="toc-text">还原存档对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查询存档对象"><span class="toc-number">4.8.</span> <span class="toc-text">查询存档对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#共享对象"><span class="toc-number">4.9.</span> <span class="toc-text">共享对象</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#存储类分析"><span class="toc-number">5.</span> <span class="toc-text">存储类分析</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/18/hello-world/" class="archive-article-date">
-  	<time datetime="2020-01-18T02:07:25.194Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-18</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/18/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -279,8 +423,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
